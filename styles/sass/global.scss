@@ -1,0 +1,81 @@
+$backgroundurl: url(../../assets/where-is-fashion-at-with-natural-black-hair-1425658821.webp);
+@mixin imgbanner($bgimg,$width,$height){
+    margin: 0px;
+    padding: 0px;
+    background-image: $bgimg;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    min-width: $width;
+    height: $height;
+}
+
+@mixin flex($flexdir,$align,$justify) {
+    display: flex;
+    flex-direction: $flexdir;
+    align-items: $align;
+    justify-content: $justify;
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Poppins:wght@200&family=Quicksand&display=swap');
+
+
+.bannerdiv
+{
+    @include imgbanner(none,100%,100vh);
+    background-color: #646464;
+}
+
+body
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.mainnav div
+{
+    // @include flex(row,stretch,center);
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content:space-between;
+    padding: 6px;
+}
+.logo_bo
+{
+    background-image: url(../../assets/logo_bo.svg);
+    background-size: cover;
+    aspect-ratio: 287/265;
+    height: 50px;
+}
+.burger
+{
+    background: none;
+    border: none;
+    background-size: contain;
+    background-position: center;
+    background-image: url(../../assets/nav-burger.svg);
+    background-repeat: no-repeat;
+    aspect-ratio: 827/1286;
+    width: 40px;
+
+}
+.logolink{
+    height: fit-content;
+}
+
+.search{
+   background-image: url(../../assets/search.svg); 
+   background: none;
+   border: none;
+   background-size: contain;
+   aspect-ratio: 1/1;
+   width: 30px;
+}
+.titletxt
+{
+    font-family: 'Josefin Sans', sans-serif; 
+    font-size: 160pt; 
+    margin: 5px;
+}
